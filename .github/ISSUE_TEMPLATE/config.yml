@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 插件怎么装？看小白安装教程
+    url: https://doc.yulancloud.us.ci/plugins/install
+    about: 下载了插件不知道放哪、怎么备份、怎么回滚，先看这篇
+  - name: 想做插件？看功能自定义教程
+    url: https://doc.yulancloud.us.ci/developer/custom
+    about: 从加接口、建表到做出完整功能的 10 篇线性教程
+  - name: 系统本身报错 / 提 bug
+    url: https://github.com/yulancloud/yulancloud/issues
+    about: 插件市场只收插件提交，系统问题请去主仓库

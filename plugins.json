@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "name": "欲蓝财务 · 插件市场索引",
+  "updated": "2026-11-15",
+  "market": "https://yulancloud.us.ci/market/",
+  "template": "https://github.com/yulancloud/plugin-template",
+  "submit": "https://github.com/yulancloud/plugins/issues/new?template=plugin-submit.yml",
+  "docs": "https://doc.yulancloud.us.ci/plugins/install",
+  "submitDocs": "https://doc.yulancloud.us.ci/plugins/submit",
+  "categories": ["示例", "工具", "前台展示", "后台增强", "支付发货", "主题"],
+  "plugins": [
+    {
+      "id": "hello-world",
+      "name": "Hello 示例插件",
+      "version": "1.0.0",
+      "author": "欲蓝财务",
+      "description": "零依赖示例插件：只新增一个独立页面，装上后访问 /plugins/hello/ 就能看到效果。不改核心文件、不建表、不跑迁移，适合第一次练手安装流程。",
+      "category": "示例",
+      "tags": ["示例", "新手友好", "零依赖"],
+      "icon": "https://raw.githubusercontent.com/yulancloud/plugins/main/assets/hello-world.svg",
+      "download": "https://raw.githubusercontent.com/yulancloud/plugins/main/packages/hello-world-v1.0.0.zip",
+      "homepage": "https://github.com/yulancloud/plugin-template",
+      "docs": "https://doc.yulancloud.us.ci/plugins/install",
+      "requires": ">=1.1.0",
+      "build": "20261115a",
+      "updated": "2026-11-15",
+      "size": "4 KB",
+      "verified": true,
+      "featured": true
+    }
+  ]
+}

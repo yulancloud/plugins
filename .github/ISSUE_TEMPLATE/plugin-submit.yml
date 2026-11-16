@@ -1,0 +1,122 @@
+name: 上传插件到市场
+description: 把你的插件提交上架到 yulancloud.us.ci/market
+title: "[插件提交] "
+labels: ["plugin-submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢分享插件！提交后会生成一个 Issue，维护者审核通过即合并进 `plugins.json`，市场页会自动出现。
+
+        **插件包请放在你自己的 GitHub 仓库**（推荐 Release 资产，或仓库内 raw 直链），这里只填链接，不要上传 zip 附件。
+        还没做插件？用 [模板仓库](https://github.com/yulancloud/plugin-template) 点 `Use this template` 一键建仓；
+        不知道怎么加新功能，看 [功能自定义教程](https://doc.yulancloud.us.ci/developer/custom)（10 篇）。
+
+  - type: input
+    id: name
+    attributes:
+      label: 插件名称
+      description: 显示在市场卡片上的名字
+      placeholder: 例如：订单公告条
+    validations:
+      required: true
+
+  - type: input
+    id: id
+    attributes:
+      label: 插件 ID
+      description: 小写英文 + 连字符，全市场唯一，改起来麻烦，先想好
+      placeholder: 例如：order-notice
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: 版本号
+      placeholder: "1.0.0"
+    validations:
+      required: true
+
+  - type: input
+    id: author
+    attributes:
+      label: 作者
+      description: 你的名字或 GitHub ID
+      placeholder: 例如：yulancloud
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: 分类
+      options:
+        - 示例
+        - 工具
+        - 前台展示
+        - 后台增强
+        - 支付发货
+        - 主题
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 插件简介
+      description: 一句话说清给商城加了什么功能，40–80 字最合适
+      placeholder: 在首页顶部加一条可后台配置的公告，支持定时显示与关闭
+    validations:
+      required: true
+
+  - type: input
+    id: download
+    attributes:
+      label: 插件 zip 公开直链
+      description: GitHub Release 资产或 raw 链接，必须无需登录即可下载
+      placeholder: https://github.com/你的ID/仓库/releases/download/v1.0.0/xxx-v1.0.0.zip
+    validations:
+      required: true
+
+  - type: input
+    id: homepage
+    attributes:
+      label: 插件仓库 / 介绍页
+      placeholder: https://github.com/你的ID/仓库
+
+  - type: input
+    id: icon
+    attributes:
+      label: 图标直链（可选）
+      description: svg 或 png，留空则市场页用插件名首字占位
+      placeholder: https://raw.githubusercontent.com/你的ID/仓库/main/assets/icon.svg
+
+  - type: input
+    id: requires
+    attributes:
+      label: 兼容的系统版本
+      value: ">=1.1.0"
+    validations:
+      required: true
+
+  - type: textarea
+    id: install_notes
+    attributes:
+      label: 安装要点（可选）
+      description: 是否需要跑迁移、改核心文件、bump ?v= 版本号、怎么卸载
+      placeholder: 只需复制 files/ 到项目根目录，不用跑迁移；卸载删掉对应目录即可
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: 提交前自查
+      options:
+        - label: 包里含 plugin.json 和给小白看的 INSTALL.md
+          required: true
+        - label: 包里没有数据库文件、配置文件、密钥、.git 目录
+          required: true
+        - label: 已在干净的 v1.1.0 上实测安装与卸载
+          required: true
+        - label: 代码没有远程上报、外链脚本等与描述无关的行为，同意公开展示
+          required: true
