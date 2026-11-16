@@ -1,13 +1,20 @@
 {
   "schema": 1,
   "name": "欲蓝财务 · 插件市场索引",
-  "updated": "2026-11-15",
+  "updated": "2026-11-16",
   "market": "https://yulancloud.us.ci/market/",
   "template": "https://github.com/yulancloud/plugin-template",
   "submit": "https://github.com/yulancloud/plugins/issues/new?template=plugin-submit.yml",
   "docs": "https://doc.yulancloud.us.ci/plugins/install",
   "submitDocs": "https://doc.yulancloud.us.ci/plugins/submit",
-  "categories": ["示例", "工具", "前台展示", "后台增强", "支付发货", "主题"],
+  "categories": [
+    "示例",
+    "工具",
+    "前台展示",
+    "后台增强",
+    "支付发货",
+    "主题"
+  ],
   "plugins": [
     {
       "id": "hello-world",
@@ -16,7 +23,11 @@
       "author": "欲蓝财务",
       "description": "零依赖示例插件：只新增一个独立页面，装上后访问 /plugins/hello/ 就能看到效果。不改核心文件、不建表、不跑迁移，适合第一次练手安装流程。",
       "category": "示例",
-      "tags": ["示例", "新手友好", "零依赖"],
+      "tags": [
+        "示例",
+        "新手友好",
+        "零依赖"
+      ],
       "icon": "https://raw.githubusercontent.com/yulancloud/plugins/main/assets/hello-world.svg",
       "download": "https://raw.githubusercontent.com/yulancloud/plugins/main/packages/hello-world-v1.0.0.zip",
       "homepage": "https://github.com/yulancloud/plugin-template",
@@ -27,6 +38,78 @@
       "size": "4 KB",
       "verified": true,
       "featured": true
+    },
+    {
+      "id": "smtp-login",
+      "name": "SMTP 邮箱验证码登录",
+      "version": "1.0.0",
+      "author": "欲蓝云",
+      "description": "后台多出「邮件服务器配置」，登录页新增邮箱验证码登录入口。纯 PHP SMTP 客户端，支持 STARTTLS/SSL，验证码 5 分钟有效、用后即焚。密码只写不读。需系统 ≥ v1.2.1。",
+      "category": "后台增强",
+      "tags": [
+        "登录",
+        "SMTP",
+        "邮箱验证码",
+        "后台增强"
+      ],
+      "icon": "https://raw.githubusercontent.com/yulancloud/plugins/main/assets/smtp-login.svg",
+      "download": "https://raw.githubusercontent.com/yulancloud/plugins/main/packages/smtp-login-v1.0.0.zip",
+      "homepage": "https://github.com/yulancloud/yulancloud",
+      "docs": "https://doc.yulancloud.us.ci/plugins/install",
+      "requires": ">=1.2.1",
+      "build": "20261116e",
+      "updated": "2026-11-16",
+      "size": "2 KB",
+      "verified": true,
+      "featured": true
+    },
+    {
+      "id": "multi-admin",
+      "name": "多管理员账号",
+      "version": "1.0.0",
+      "author": "欲蓝云",
+      "description": "后台多出「多账号管理」，店主可新增第二个、第三个管理员，支持编辑/启停/重置密码/删除。一次性密码只显示一次，禁止删除自己与最后一个店主。需系统 ≥ v1.2.1。",
+      "category": "后台增强",
+      "tags": [
+        "管理员",
+        "多账号",
+        "权限",
+        "后台增强"
+      ],
+      "icon": "https://raw.githubusercontent.com/yulancloud/plugins/main/assets/multi-admin.svg",
+      "download": "https://raw.githubusercontent.com/yulancloud/plugins/main/packages/multi-admin-v1.0.0.zip",
+      "homepage": "https://github.com/yulancloud/yulancloud",
+      "docs": "https://doc.yulancloud.us.ci/plugins/install",
+      "requires": ">=1.2.1",
+      "build": "20261116e",
+      "updated": "2026-11-16",
+      "size": "2 KB",
+      "verified": true,
+      "featured": true
+    },
+    {
+      "id": "login-dark-mode",
+      "name": "登录页深色模式",
+      "version": "1.0.0",
+      "author": "欲蓝云",
+      "description": "登录页右上角出现明暗切换按钮，选择记在浏览器本地、下次自动应用。纯前端、不改核心逻辑。需系统 ≥ v1.2.1。",
+      "category": "主题",
+      "tags": [
+        "深色模式",
+        "登录页",
+        "前端",
+        "主题"
+      ],
+      "icon": "https://raw.githubusercontent.com/yulancloud/plugins/main/assets/login-dark-mode.svg",
+      "download": "https://raw.githubusercontent.com/yulancloud/plugins/main/packages/login-dark-mode-v1.0.0.zip",
+      "homepage": "https://github.com/yulancloud/yulancloud",
+      "docs": "https://doc.yulancloud.us.ci/plugins/install",
+      "requires": ">=1.2.1",
+      "build": "20261116e",
+      "updated": "2026-11-16",
+      "size": "2 KB",
+      "verified": true,
+      "featured": false
     }
   ]
 }
